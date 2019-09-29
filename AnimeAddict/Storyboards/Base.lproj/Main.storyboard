@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pnN-fO-YND">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="6Ls-GQ-lng">
+            <objects>
+                <viewController id="pnN-fO-YND" customClass="LoginViewController" customModule="AnimeAddict" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MYX-ro-m6u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUA-lK-wCU">
+                                <rect key="frame" x="100" y="94" width="214" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4cK-pV-rqh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="GGr-8r-98l" kind="embed" identifier="EmbededSegue" id="pJJ-aR-fzN"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6u-sX-M6T">
+                                <rect key="frame" x="170" y="175" width="74" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iHN-TG-4eq"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="LoginPressed:" destination="pnN-fO-YND" eventType="touchUpInside" id="I8y-y0-H1a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="q6u-sX-M6T" firstAttribute="top" secondItem="hUA-lK-wCU" secondAttribute="bottom" constant="21" id="0Oe-om-6nG"/>
+                            <constraint firstItem="Bap-Fc-V0w" firstAttribute="trailing" secondItem="hUA-lK-wCU" secondAttribute="trailing" constant="100" id="1UX-wi-8VZ"/>
+                            <constraint firstItem="hUA-lK-wCU" firstAttribute="leading" secondItem="Bap-Fc-V0w" secondAttribute="leading" constant="100" id="9Ho-qc-a4X"/>
+                            <constraint firstItem="hUA-lK-wCU" firstAttribute="top" secondItem="Bap-Fc-V0w" secondAttribute="top" constant="74" id="Wvn-Qj-mYj"/>
+                            <constraint firstItem="q6u-sX-M6T" firstAttribute="leading" secondItem="Bap-Fc-V0w" secondAttribute="leading" constant="170" id="kAC-j1-nyj"/>
+                            <constraint firstItem="q6u-sX-M6T" firstAttribute="centerX" secondItem="Bap-Fc-V0w" secondAttribute="centerX" id="wwK-cp-p2A"/>
+                            <constraint firstItem="hUA-lK-wCU" firstAttribute="centerX" secondItem="Bap-Fc-V0w" secondAttribute="centerX" id="xeY-To-hMM"/>
+                            <constraint firstItem="Bap-Fc-V0w" firstAttribute="trailing" secondItem="q6u-sX-M6T" secondAttribute="trailing" constant="170" id="z2t-lN-gua"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bap-Fc-V0w"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="74n-dN-xit"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Pm-io-ItD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="-868"/>
+        </scene>
+        <!--Container Controller-->
+        <scene sceneID="JoN-8u-wj4">
+            <objects>
+                <viewController id="GGr-8r-98l" customClass="ContainerController" customModule="AnimeAddict" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jVa-2g-OaO">
+                        <rect key="frame" x="0.0" y="0.0" width="214" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username (not email)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDQ-Ff-rvS">
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dS0-Ag-T7N"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBP-iK-qoT">
+                                <rect key="frame" x="0.0" y="30" width="214" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="S6t-ji-UEC"/>
+                                    <constraint firstAttribute="height" constant="30" id="rNs-aO-LeM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bBP-iK-qoT" secondAttribute="trailing" id="2ut-yA-qHV"/>
+                            <constraint firstItem="KDQ-Ff-rvS" firstAttribute="leading" secondItem="jVa-2g-OaO" secondAttribute="leading" id="3Dh-Z8-jGG"/>
+                            <constraint firstAttribute="bottom" secondItem="bBP-iK-qoT" secondAttribute="bottom" id="Dry-OE-q5K"/>
+                            <constraint firstAttribute="trailing" secondItem="KDQ-Ff-rvS" secondAttribute="trailing" id="T7u-U7-EWl"/>
+                            <constraint firstItem="KDQ-Ff-rvS" firstAttribute="top" secondItem="jVa-2g-OaO" secondAttribute="top" id="WxF-H7-6jJ"/>
+                            <constraint firstItem="bBP-iK-qoT" firstAttribute="leading" secondItem="jVa-2g-OaO" secondAttribute="leading" id="lDG-S5-gtK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="06g-Jf-nSf"/>
+                    </view>
+                    <connections>
+                        <outlet property="PasswordTextField" destination="bBP-iK-qoT" id="Hod-Cy-H7q"/>
+                        <outlet property="UsernameTextField" destination="KDQ-Ff-rvS" id="x4V-Zm-udE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSc-uL-gFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="-1266"/>
+        </scene>
+        <!--Watching-->
+        <scene sceneID="uNI-8l-qfi">
+            <objects>
+                <tableViewController storyboardIdentifier="WatchView" id="GDs-zn-VLC" customClass="WatchViewController" customModule="AnimeAddict" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="62n-Ic-NPC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IGA-YP-GFx">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IGA-YP-GFx" id="Y5I-o2-iHF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GDs-zn-VLC" id="jTh-iM-5dQ"/>
+                            <outlet property="delegate" destination="GDs-zn-VLC" id="0i8-Y4-6ap"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Watching" id="Iam-Fx-gQ8"/>
+                    <navigationItem key="navigationItem" prompt="Logout" id="KXk-jB-ZU3">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="mPb-wo-zew"/>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="UDC-s6-W5F">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Refreshing...">
+                                <attributes>
+                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJq-Sp-jqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="766"/>
+        </scene>
+        <!--Nav Bar Controller-->
+        <scene sceneID="qZ2-Y6-VNc">
+            <objects>
+                <navigationController storyboardIdentifier="NavBarView" automaticallyAdjustsScrollViewInsets="NO" id="voB-Yq-60f" customClass="NavBarController" customModule="AnimeAddict" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="ndk-Le-uqK">
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ScW-PG-GpI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="LuY-r4-VDz" kind="relationship" relationship="rootViewController" id="7P0-XS-Wb8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZx-Hc-ae9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880" y="-868"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aK1-kX-HD3">
+            <objects>
+                <viewController id="LuY-r4-VDz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qPx-Ye-Drd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aI8-1b-de1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vZ9-7N-mtr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iD-j7-XqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2758" y="-868"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GVh-Jm-8GL">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarView" automaticallyAdjustsScrollViewInsets="NO" id="vIU-W2-l3c" customClass="TabBarController" customModule="AnimeAddict" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vWl-vE-g9y"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="fXY-NX-Xvx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GDs-zn-VLC" kind="relationship" relationship="viewControllers" id="xO5-LS-Eym"/>
+                        <segue destination="cN8-JX-1Gm" kind="relationship" relationship="viewControllers" id="U11-HY-6Sj"/>
+                        <segue destination="O3R-fD-wJH" kind="relationship" relationship="viewControllers" id="2ha-ko-uxJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ehf-AL-2DJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="-99"/>
+        </scene>
+        <!--All-->
+        <scene sceneID="meh-KC-yIL">
+            <objects>
+                <tableViewController storyboardIdentifier="AllView" id="cN8-JX-1Gm" customClass="AllViewController" customModule="AnimeAddict" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F1O-Nx-wxh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="I9f-26-b0X">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I9f-26-b0X" id="Fwb-y9-1r2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cN8-JX-1Gm" id="ezE-7k-neF"/>
+                            <outlet property="delegate" destination="cN8-JX-1Gm" id="TDZ-J6-gfo"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="All" id="QCu-8v-Gew"/>
+                    <navigationItem key="navigationItem" id="t0h-Vk-fCw"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="1o2-HL-bTr">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Refreshing...">
+                                <attributes>
+                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ob-lH-uao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880" y="765"/>
+        </scene>
+        <!--Airing-->
+        <scene sceneID="f8G-3x-qEE">
+            <objects>
+                <tableViewController storyboardIdentifier="AiringView" id="O3R-fD-wJH" customClass="AiringViewController" customModule="AnimeAddict" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="efY-EO-deL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="g3E-NW-AQ6">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g3E-NW-AQ6" id="ix4-Kq-Ald">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="O3R-fD-wJH" id="8eQ-EF-j0F"/>
+                            <outlet property="delegate" destination="O3R-fD-wJH" id="Vlf-DX-vmV"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Airing" id="e7M-79-k5D"/>
+                    <navigationItem key="navigationItem" id="RfS-2Z-HHh"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="NlE-Qg-0fF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Refreshing...">
+                                <attributes>
+                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5v-VC-fQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2759" y="765"/>
+        </scene>
+    </scenes>
+</document>
